@@ -1,5 +1,4 @@
 ### Repository Sorting
-
 Repositories can be sorted by:
 
 - Recently Updated
