@@ -1,4 +1,85 @@
+# Technical Documentation
+
+## Project Overview
+
+This project is an advanced personal portfolio website developed using HTML, CSS, and JavaScript.
+
+Assignment 3 extends the previous portfolio by adding external API integration, advanced JavaScript logic, state management, improved validation, performance improvements, and better error handling.
+
+## Technologies Used
+
+- HTML: Used to create the structure and content of the website.
+- CSS: Used for styling, responsive design, dark mode, transitions, and repository cards.
+- JavaScript: Used for interactivity, API requests, filtering, sorting, validation, and state management.
+- GitHub REST API: Used to retrieve public GitHub repository data.
+- Web Storage API (`localStorage`): Used to save the selected theme.
+
+## Project Structure
+
+- `index.html` contains the main website structure.
+- `css/styles.css` contains styling and responsive design.
+- `js/script.js` contains the interactive JavaScript features.
+- `assets/images/` contains project images.
+- `docs/ai-usage-report.md` documents AI usage.
+- `docs/technical-documentation.md` contains the technical documentation.
+
+## Main Sections
+
+### About Me
+
+The About Me section introduces the portfolio owner and provides a short description of her interests.
+
+### Projects
+
+The Projects section displays portfolio projects using project cards.
+
+Each project contains a Show Details button. JavaScript uses `classList.toggle()` to display or hide additional information.
+
+The button text changes between Show Details and Hide Details depending on the current state.
+
+### GitHub Repositories
+
+The GitHub section dynamically displays public repositories retrieved from the GitHub REST API.
+
+Each repository card can display:
+
+- Repository name
+- Description
+- Programming language
+- Number of stars
+- Last updated date
+- Repository link
+
+### Contact
+
+The Contact section contains a form with:
+
+- Name
+- Email
+- Message
+
+JavaScript validates the information before displaying a success message.
+
+## GitHub API Integration
+
+The website connects to the GitHub REST API using `fetch()`.
+
+The API request retrieves public repositories from the GitHub account `HissahAlyaseen`.
+
+The request is handled using `async` and `await`.
+
+If the request fails, `try` and `catch` are used to display a user-friendly error message.
+
+## Complex Logic
+
+### Repository Filtering
+
+The website creates language filter options from the repositories returned by the API.
+
+When the user chooses a programming language, only repositories that use that language are displayed.
+
 ### Repository Sorting
+
 Repositories can be sorted by:
 
 - Recently Updated
@@ -24,9 +105,9 @@ If all conditions are satisfied, a success message is displayed and the form fie
 
 The website includes Dark Mode and Light Mode.
 
-When the user changes the theme, JavaScript updates the dark-mode class.
+When the user changes the theme, JavaScript updates the `dark-mode` class.
 
-The selected theme is stored using localStorage.
+The selected theme is stored using `localStorage`.
 
 When the page is refreshed or reopened, the saved theme is restored automatically.
 
@@ -55,20 +136,20 @@ The project includes several performance improvements.
 
 ### Deferred JavaScript
 
-The JavaScript file uses the defer attribute so the browser can continue parsing the HTML before executing JavaScript.
+The JavaScript file uses the `defer` attribute so the browser can continue parsing the HTML before executing JavaScript.
 
 ### Lazy Loading
 
-Project images use loading="lazy" so they are loaded only when needed.
+Project images use `loading="lazy"` so they are loaded only when needed.
 
 ### Reusable Functions
 
 Repeated logic is organized into reusable functions such as:
 
-- displayRepositories()
-- renderRepositories()
-- showFormMessage()
-- escapeHTML()
+- `displayRepositories()`
+- `renderRepositories()`
+- `showFormMessage()`
+- `escapeHTML()`
 
 This reduces repeated code and improves readability.
 
@@ -76,11 +157,11 @@ This reduces repeated code and improves readability.
 
 Repository data comes from an external API.
 
-The escapeHTML() helper is used before displaying repository text to reduce the risk of unsafe HTML being inserted into the page.
+The `escapeHTML()` helper is used before displaying repository text to reduce the risk of unsafe HTML being inserted into the page.
 
 Repository links that open in a new tab use:
 
-rel="noopener noreferrer"
+`rel="noopener noreferrer"`
 
 ## Responsive Design
 

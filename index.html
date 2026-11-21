@@ -4,88 +4,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hissah Alyaseen Portfolio</title>
+    <meta name="description" content="Hissah Alyaseen personal portfolio">
+    <title>Hissah Alyaseen | Portfolio</title>
+
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- defer improves loading performance -->
+    <script src="js/script.js" defer></script>
 </head>
 
-
 <body>
-    <header>
-        <nav>
-            <h1>Hissah Alyaseen</h1>
 
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>Hissah Alyaseen</h1>
+                <p>Computer Science Student @ KFUPM</p>
+            </div>
+
+            <button id="theme-toggle" type="button">
+                🌙 Dark Mode
+            </button>
+        </div>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#github-projects">GitHub</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <main>
 
+        <!-- About -->
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello! I'm Hissah Alyaseen, a Computer Science student at KFUPM.</p>
-            <p>I am interested in technology, web development, and artificial intelligence.</p>
+
+            <p>
+                Hello! I am Hissah Alyaseen, a Computer Science student at
+                King Fahd University of Petroleum and Minerals.
+                I am interested in technology, web development, networking,
+                cybersecurity, and learning new computer science skills.
+            </p>
         </section>
 
-
+        <!-- Projects -->
         <section id="projects">
-            <h2>Projects</h2>
+            <h2>My Projects</h2>
 
-            <div class="projects-container">
+            <div class="projects-grid">
 
-                <div class="project">
-                    <img src="assets/images/project1.png" alt="Hello Web App project placeholder">
+                <article class="project">
+                    <img
+                        src="assets/images/project1.png"
+                        alt="Hello Web App project"
+                        loading="lazy">
+
                     <h3>Hello Web App</h3>
-                    <p>A simple web application built using Node.js and Express.</p>
-                    <button class="details-btn" type="button">Show Details</button>
-                    <p class="project-details">
-                        This project helped me practice Node.js, Express, and basic web development concepts.
-                    </p>
-                </div>
 
-
-                <div class="project">
-                    <img src="assets/images/project2.png" alt="Recipe sharing platform placeholder">
-                    <h3>Recipe Sharing Platform</h3>
                     <p>
-                        An in-progress recipe-sharing platform designed for users with dietary
-                        restrictions such as halal, vegan, gluten-free, and food allergies.
+                        A simple web application created using Node.js and Express.
                     </p>
-                    <button class="details-btn" type="button">Show Details</button>
+
+                    <button class="details-btn" type="button">
+                        Show Details
+                    </button>
+
                     <p class="project-details">
-                        The platform includes dietary filters, ingredient substitutions, saved recipes, ratings, and
-                        meal planning.
+                        This project helped me practice Node.js, Express,
+                        and basic web development concepts.
                     </p>
-                </div>
+                </article>
+
+                <article class="project">
+                    <img
+                        src="assets/images/project2.png"
+                        alt="Recipe Sharing Platform project"
+                        loading="lazy">
+
+                    <h3>Recipe Sharing Platform</h3>
+
+                    <p>
+                        A recipe-sharing platform for users with different
+                        dietary needs.
+                    </p>
+
+                    <button class="details-btn" type="button">
+                        Show Details
+                    </button>
+
+                    <p class="project-details">
+                        The platform includes dietary filters, ingredient
+                        substitutions, saved recipes, ratings, and meal planning.
+                    </p>
+                </article>
 
             </div>
         </section>
 
+        <!-- GitHub API -->
+        <section id="github-projects">
 
+            <h2>My GitHub Repositories</h2>
+
+            <p>
+                This section loads my public GitHub repositories using the
+                GitHub REST API.
+            </p>
+
+            <div class="repo-controls">
+
+                <label for="language-filter">
+                    Filter by language:
+                </label>
+
+                <select id="language-filter">
+                    <option value="all">All Languages</option>
+                </select>
+
+                <label for="repo-sort">
+                    Sort repositories:
+                </label>
+
+                <select id="repo-sort">
+                    <option value="updated">Recently Updated</option>
+                    <option value="name">Name</option>
+                    <option value="stars">Stars</option>
+                </select>
+
+            </div>
+
+            <p id="github-status">
+                Loading repositories...
+            </p>
+
+            <div id="github-repos" class="github-grid"></div>
+
+        </section>
+
+        <!-- Contact -->
         <section id="contact">
+
             <h2>Contact Me</h2>
 
             <form id="contact-form" novalidate>
+
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
+                <input
+                    type="text"
+                    id="name"
+                    name="name">
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
+                <input
+                    type="email"
+                    id="email"
+                    name="email">
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5"></textarea>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"></textarea>
 
-                <button type="submit">Send</button>
+                <button type="submit">
+                    Send
+                </button>
 
                 <p id="form-message"></p>
+
             </form>
+
         </section>
 
     </main>
-    <script src="js/script.js"></script>
+
+    <footer>
+        <p>
+            © 2026 Hissah Alyaseen
+        </p>
+    </footer>
 
 </body>
 
